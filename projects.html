@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explore design, engineering, audit, and construction projects by JP Chavez Electrical Design and Construction and JP Chavez Inc.">
+    <title>Projects | JP Chavez</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      /* Project-page header based on the supplied JP Chavez reference. */
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        min-height: 140px;
+        padding: 24px max(5%, calc((100% - 1140px) / 2));
+        background: #25274d;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        box-shadow: none;
+      }
+
+      .site-header .brand {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        color: #fff;
+      }
+
+      .site-header .brand-mark {
+        display: grid;
+        place-items: center;
+        flex: 0 0 64px;
+        width: 64px;
+        height: 64px;
+        border: 2px solid #3155ff;
+        border-radius: 50%;
+        background: #fff;
+        color: #2144ea;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: -.04em;
+      }
+
+      .site-header .brand-copy {
+        padding-top: 5px;
+      }
+
+      .site-header .brand strong {
+        display: block;
+        color: #fff;
+        font-size: 29px;
+        line-height: 1.15;
+        text-transform: none;
+        letter-spacing: 0;
+      }
+
+      .site-header .brand small {
+        display: block;
+        margin-top: 17px;
+        color: #9999a8;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: .12em;
+      }
+
+      .site-header nav {
+        display: flex;
+        align-items: center;
+        gap: 31px;
+      }
+
+      .site-header nav a {
+        position: relative;
+        padding: 10px 0;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 600;
+      }
+
+      .site-header nav a::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 2px;
+        left: 0;
+        height: 2px;
+        background: #fed03d;
+        transform: scaleX(0);
+        transition: transform .2s ease;
+      }
+
+      .site-header nav a:hover,
+      .site-header nav a.active {
+        color: #fff;
+      }
+
+      .site-header nav a:hover::after,
+      .site-header nav a.active::after {
+        transform: scaleX(1);
+      }
+
+      .projects-hero {
+        position: relative;
+        min-height: 365px;
+        padding: 70px 5%;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+        color: #fff;
+        text-align: center;
+        background:
+          linear-gradient(rgba(0, 0, 0, .48), rgba(0, 0, 0, .48)),
+          url("https://jpcengineers.com.ph/wp-content/uploads/2025/08/header.jpg") center / cover no-repeat,
+          #777;
+      }
+
+      .projects-hero__content {
+        width: min(100%, 1120px);
+      }
+
+      .projects-hero h1 {
+        position: relative;
+        display: inline-block;
+        padding-bottom: 17px;
+        color: #fff;
+        font-size: clamp(30px, 4vw, 45px);
+        line-height: 1.1;
+        text-transform: uppercase;
+        letter-spacing: .04em;
+      }
+
+      .projects-hero h1::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 145px;
+        height: 3px;
+        background: #fed03d;
+        transform: translateX(-50%);
+      }
+
+      .projects-hero p {
+        max-width: 1100px;
+        margin: 13px auto 0;
+        color: #fff;
+        font-size: 15px;
+        line-height: 1.55;
+      }
+
+      @media (max-width: 820px) {
+        .site-header {
+          position: relative;
+          min-height: 0;
+          padding: 20px;
+          flex-direction: column;
+          gap: 16px;
+          text-align: center;
+        }
+
+        .site-header .brand {
+          align-items: center;
+          text-align: left;
+        }
+
+        .site-header nav {
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 8px 22px;
+        }
+
+        .projects-hero {
+          min-height: 320px;
+          padding: 58px 22px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .site-header .brand-mark {
+          flex-basis: 52px;
+          width: 52px;
+          height: 52px;
+        }
+
+        .site-header .brand strong {
+          font-size: 23px;
+        }
+
+        .site-header .brand small {
+          margin-top: 8px;
+          font-size: 10px;
+        }
+
+        .site-header nav a {
+          font-size: 13px;
+        }
+
+        .projects-hero h1 {
+          font-size: 28px;
+        }
+
+        .projects-hero p {
+          font-size: 13px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to projects</a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="JP Chavez Inc. home">
+        <span class="brand-mark">JPCI</span>
+        <span class="brand-copy">
+          <strong>JP Chavez Inc.</strong>
+          <small>DESIGNER. CONTRACTOR.</small>
+        </span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="profile.html">Profile</a>
+        <a class="active" href="#main" aria-current="page">Projects</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="projects-hero" id="top" aria-labelledby="projects-title">
+        <div class="projects-hero__content">
+          <h1 id="projects-title">What We Have Implemented</h1>
+          <p>Our expertise spans a diverse range of projects, including residential electrical systems, commercial offices, condominiums, golf resorts, and industrial facilities. Below is a selection of the successful projects we have completed.</p>
+        </div>
+      </section>
+      <section class="intro" id="about">
+        <div>
+          <p class="eyebrow dark">Our practice</p>
+          <h2>Design expertise.<br>Construction capability.</h2>
+        </div>
+        <p>JP Chavez Electrical Design and Construction was founded in 2013 with a focus on electrical and auxiliary systems. JP Chavez Inc. was established in 2019 as its construction arm, expanding into mechanical, plumbing and fire protection work.</p>
+      </section>
+      <div class="category-nav" id="categories">
+        <span>Browse by category</span>
+        <div>
+          <a href="#commercial-industrial-design">Commercial &amp; industrial design</a>
+          <a href="#mid-high-rise-residential-design">Mid- &amp; high-rise residential design</a>
+          <a href="#hospitals-health-care">Hospitals &amp; health care</a>
+          <a href="#high-end-residences">High-end residences</a>
+          <a href="#audit-appraisal">Audit &amp; appraisal</a>
+          <a href="#mefps-design-build">MEFPS design &amp; build</a>
+          <a href="#other-construction">Other construction</a>
+          <a href="#ongoing-construction">Ongoing construction</a>
+          <a href="#electrical-auxiliary-construction">Electrical &amp; auxiliary construction</a>
+        </div>
+      </div>
+      <div class="projects-container">
+        <section class="project-category" id="commercial-industrial-design">
+          <div class="category-header">
+            <span>Design projects</span>
+            <h2>Commercial &amp; industrial design</h2>
+            <p>9 featured projects</p>
+          </div>
+          <div class="projects-grid">
+            <article class="project-card">
+              <div class="project-image">
+                 <img
+                    src="./images/project-alviera-monde-nissin.png"
+                    alt="Project Alviera - Monde Nissin"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Project Alviera - Monde Nissin</h3>
+                <p>Industrial facility featured in the company’s electrical design portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/project-lion-flexo.png"
+                    alt="Project Lion - Flexo"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Project Lion - Flexo</h3>
+                <p>Industrial facility featured in the company’s electrical design portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/campmak-eco-learning-hub.png"
+                    alt="Campmak Eco Learning Hub"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Campmak Eco Learning Hub</h3>
+                <p>Commercial development featured in the company’s design portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/farm-for-feast.png"
+                    alt="Farm for Feast"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Farm for Feast</h3>
+                <p>An architectural destination included among the company’s commercial design projects.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/jpark-island-resort.png"
+                    alt="Jpark Island Resort - Bohol"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Jpark Island Resort - Bohol</h3>
+                <p>Resort development featured in the commercial and industrial design portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/casa-blanca-hoteland-casino.png"
+                    alt="Casa Blanca Hotel and Casino"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Casa Blanca Hotel and Casino</h3>
+                <p>Commercial development featured in the company’s design portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/ayala-malls-malolos.png"
+                    alt="Ayala Malls - Malolos"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Ayala Malls - Malolos</h3>
+                <p>Retail development featured in the commercial and industrial design portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/marquee-mall-expansion.png"
+                    alt="Marquee Mall Expansion"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Marquee Mall Expansion</h3>
+                <p>Retail development featured in the commercial and industrial design portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/ayala-malls-cerca.png"
+                    alt="Ayala Malls - Cerca"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Ayala Malls - Cerca</h3>
+                <p>Retail development featured in the commercial and industrial design portfolio.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section class="project-category" id="mid-high-rise-residential-design">
+          <div class="category-header">
+            <span>Design projects</span>
+            <h2>Mid- &amp; high-rise residential design</h2>
+            <p>16 featured projects</p>
+          </div>
+          <div class="projects-grid">
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/city-clou-cebu.jpeg"
+                    alt="City Clou - Cebu"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>City Clou - Cebu</h3>
+                <p>Residential building featured in the mid- and high-rise design portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/la-vida-towers.jpeg"
+                    alt="La Vida Towers"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>La Vida Towers</h3>
+                <p>Residential building featured in the mid- and high-rise design portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/tahao-project.png"
+                    alt="Tahao Project"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Tahao Project</h3>
+                <p>Residential building featured in the mid- and high-rise design portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/harbour-park-residences.jpeg"
+                    alt="Harbour Park Residences"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Harbour Park Residences</h3>
+                <p>Residential building featured in the mid- and high-rise design portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/amaia-the-junction-place.png"
+                    alt="Amaia - The Junction Place"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Amaia - The Junction Place</h3>
+                <p>Residential building featured in the mid- and high-rise design portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/amaia-sucat.png"
+                    alt="Amaia - Sucat"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Amaia - Sucat</h3>
+                <p>Residential building featured in the mid- and high-rise design portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/freia-at-pico-de-loro.jpeg"
+                    alt="Freia at Pico de Loro"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Freia at Pico de Loro</h3>
+                <p>Residential building featured in the mid- and high-rise design portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/azure-north-barbados.jpeg"
+                    alt="Azure North - Barbados"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Azure North - Barbados</h3>
+                <p>Residential building featured in the mid- and high-rise design portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/avenir-the-vue.png"
+                    alt="Avenir The Vue"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Avenir The Vue</h3>
+                <p>Residential building featured in the mid- and high-rise design portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/garden-city.png"
+                    alt="Garden City"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Garden City</h3>
+                <p>Residential building featured in the mid- and high-rise design portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/chugasco-dormitory.png"
+                    alt="Chugasco Dormitory"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Chugasco Dormitory</h3>
+                <p>Residential building featured in the mid- and high-rise design portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/sentria-storeys-vermosa.png"
+                    alt="Sentria Storeys - Vermosa"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Sentria Storeys - Vermosa</h3>
+                <p>Residential building featured in the mid- and high-rise design portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/levana-towers.png"
+                    alt="Levana Towers"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Levana Towers</h3>
+                <p>Residential building featured in the mid- and high-rise design portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/azure-north-mrb.png"
+                    alt="Azure North MRB"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Azure North MRB</h3>
+                <p>Residential building featured in the mid- and high-rise design portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/century-marina-multinational.png"
+                    alt="Century Marina - Multinational"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Century Marina - Multinational</h3>
+                <p>Residential building featured in the mid- and high-rise design portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/the-empyrean.png"
+                    alt="The Empyrean"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>The Empyrean</h3>
+                <p>Residential building featured in the mid- and high-rise design portfolio.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section class="project-category" id="hospitals-health-care">
+          <div class="category-header">
+            <span>Design projects</span>
+            <h2>Hospitals &amp; health care</h2>
+            <p>12 featured projects</p>
+          </div>
+          <div class="projects-grid">
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/vita-care-unimed.png"
+                    alt="Vita Care Unimed"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Vita Care Unimed</h3>
+                <p>Health care facility featured in the company’s design portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/national-kidney-transplant-institute.png"
+                    alt="National Kidney Transplant Institute"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>National Kidney Transplant Institute</h3>
+                <p>Health care facility featured in the company’s design portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/bicol-regional-hospital.png"
+                    alt="Bicol Regional Hospital"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Bicol Regional Hospital</h3>
+                <p>Health care facility featured in the company’s design portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/east-valley-medical-center.png"
+                    alt="East Valley Medical Center"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>East Valley Medical Center</h3>
+                <p>Health care facility featured in the company’s design portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/pagsanjan-prime-medical-center.png"
+                    alt="Pagsanjan Prime Medical Center"
+                    loading="lazy">
+              </div>
+              </div>
+              <div class="project-content">
+                <h3>Pagsanjan Prime Medical Center</h3>
+                <p>Health care facility featured in the company’s design portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/prime-san-pedro-medical-center.png"
+                    alt="Prime San Pedro Medical Center"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Prime San Pedro Medical Center</h3>
+                <p>Health care facility featured in the company’s design portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/muntinlupa-cancer-center.png"
+                    alt="Muntinlupa Cancer Center"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Muntinlupa Cancer Center</h3>
+                <p>Health care facility featured in the company’s design portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/rizal-cancer-center.png"
+                    alt="Rizal Cancer Center"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Rizal Cancer Center</h3>
+                <p>Health care facility featured in the company’s design portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/ace-st-jude-medical-center-la-union.png"
+                    alt="Ace St. Jude Medical Center La Union"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Ace St. Jude Medical Center La Union</h3>
+                <p>Health care facility featured in the company’s design portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/distrito-de-morong-hospital-and-medical-center.png"
+                    alt="Distrito de Morong Hospital and Medical Center"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Distrito de Morong Hospital and Medical Center</h3>
+                <p>Health care facility featured in the company’s design portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/mt-mayon-medical-center-inc.png"
+                    alt="Mt. Mayon Medical Center Inc."
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Mt. Mayon Medical Center Inc.</h3>
+                <p>Health care facility featured in the company’s design portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/baliwag-cancer-center.png"
+                    alt="Baliwag Cancer Center"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Baliwag Cancer Center</h3>
+                <p>Health care facility featured in the company’s design portfolio.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section class="project-category" id="high-end-residences">
+          <div class="category-header">
+            <span>Design projects</span>
+            <h2>High-end residences</h2>
+            <p>7 featured projects</p>
+          </div>
+          <div class="projects-grid">
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/alegre-residence-tagaytay-highlands.png"
+                    alt="Alegre Residence - Tagaytay Highlands"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Alegre Residence - Tagaytay Highlands</h3>
+                <p>Private home featured in the high-end residential design portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/dama-de-noche.png"
+                    alt="Dama de Noche"
+                    loading="lazy">
+                </span>
+              </div>
+              <div class="project-content">
+                <h3>Dama de Noche</h3>
+                <p>Private home featured in the high-end residential design portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/flores-residence.png"
+                    alt="Flores Residence"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Flores Residence</h3>
+                <p>Private home featured in the high-end residential design portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/kawayan-beach-house.png"
+                    alt="Kawayan Beach House"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Kawayan Beach House</h3>
+                <p>Private home featured in the high-end residential design portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/singson-residence.png"
+                    alt="Singson Residence"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Singson Residence</h3>
+                <p>Private home featured in the high-end residential design portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/bataan-beach-house.png"
+                    alt="Bataan Beach House"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Bataan Beach House</h3>
+                <p>Private home featured in the high-end residential design portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/harvard-st-771-residence.png"
+                    alt="Harvard St. 771 Residence"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Harvard St. 771 Residence</h3>
+                <p>Private home featured in the high-end residential design portfolio.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section class="project-category" id="audit-appraisal">
+          <div class="category-header">
+            <span>Engineering services</span>
+            <h2>Audit &amp; appraisal</h2>
+            <p>8 featured projects</p>
+          </div>
+          <div class="projects-grid">
+            <article class="project-card">
+              <div class="project-image">
+                <span class="image-fallback" aria-hidden="true">JPC <small>PROJECT PORTFOLIO</small>
+                </span>
+              </div>
+              <div class="project-content">
+                <h3>San Sebastian Church</h3>
+                <p>Project listed in the company’s electrical audit and appraisal portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <span class="image-fallback" aria-hidden="true">JPC <small>PROJECT PORTFOLIO</small>
+                </span>
+              </div>
+              <div class="project-content">
+                <h3>Refinette Cosmetic Manufacturing Corporation</h3>
+                <p>Project listed in the company’s electrical audit and appraisal portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <span class="image-fallback" aria-hidden="true">JPC <small>PROJECT PORTFOLIO</small>
+                </span>
+              </div>
+              <div class="project-content">
+                <h3>Calatagan Project</h3>
+                <p>Project listed in the company’s electrical audit and appraisal portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <span class="image-fallback" aria-hidden="true">JPC <small>PROJECT PORTFOLIO</small>
+                </span>
+              </div>
+              <div class="project-content">
+                <h3>iACADEMY</h3>
+                <p>Project listed in the company’s electrical audit and appraisal portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <span class="image-fallback" aria-hidden="true">JPC <small>PROJECT PORTFOLIO</small>
+                </span>
+              </div>
+              <div class="project-content">
+                <h3>Delgado Memorial Hospital</h3>
+                <p>Project listed in the company’s electrical audit and appraisal portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <span class="image-fallback" aria-hidden="true">JPC <small>PROJECT PORTFOLIO</small>
+                </span>
+              </div>
+              <div class="project-content">
+                <h3>Valley Golf</h3>
+                <p>Project listed in the company’s electrical audit and appraisal portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <span class="image-fallback" aria-hidden="true">JPC <small>PROJECT PORTFOLIO</small>
+                </span>
+              </div>
+              <div class="project-content">
+                <h3>Shangri-La BGC</h3>
+                <p>Project listed in the company’s electrical audit and appraisal portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <span class="image-fallback" aria-hidden="true">JPC <small>PROJECT PORTFOLIO</small>
+                </span>
+              </div>
+              <div class="project-content">
+                <h3>Shangri-La Plaza</h3>
+                <p>Project listed in the company’s electrical audit and appraisal portfolio.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section class="project-category" id="mefps-design-build">
+          <div class="category-header">
+            <span>Design and build</span>
+            <h2>MEFPS design &amp; build</h2>
+            <p>4 featured projects</p>
+          </div>
+          <div class="projects-grid">
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/cyber-park-cagayan-casino.png"
+                    alt="Cyber Park Cagayan - Casino"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Cyber Park Cagayan - Casino</h3>
+                <p>Building project featured in the mechanical, electrical, fire protection and plumbing design-and-build portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/9-storey-residential-and-commercial-building.jpeg"
+                    alt="9-Storey Residential and Commercial Building"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>9-Storey Residential and Commercial Building</h3>
+                <p>Building project featured in the mechanical, electrical, fire protection and plumbing design-and-build portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/ngcp-office-building.png"
+                    alt="NGCP Office Building"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>NGCP Office Building</h3>
+                <p>Building project featured in the mechanical, electrical, fire protection and plumbing design-and-build portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/7-storey-residential-building.jpeg"
+                    alt="7-Storey Residential Building"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>7-Storey Residential Building</h3>
+                <p>Building project featured in the mechanical, electrical, fire protection and plumbing design-and-build portfolio.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section class="project-category" id="other-construction">
+          <div class="category-header">
+            <span>Construction</span>
+            <h2>Electrical/Auxiliary Construction Projects</h2>
+            <p>7 featured projects</p>
+          </div>
+          <div class="projects-grid">
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/infina-towers-south-tower.png"
+                    alt="Infina Towers - South Tower"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Infina Towers - South Tower</h3>
+                <p>Project listed in the company’s construction portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/alder-residence-buildings-3-4.png"
+                    alt="Alder Residence - Bldg 3 & 4"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Alder Residence - Bldg 3 & 4</h3>
+                <p>Project listed in the company’s construction portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/dusit-thani-davao.png"
+                    alt="Dusit Thani - Davao"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Dusit Thani -Davao</h3>
+                <p>Project listed in the company’s construction portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/aqua-boracay.png"
+                    alt="Aqua Boracay"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Aqua Boracay</h3>
+                <p>Project listed in the company’s construction portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/crimson-hotel-boracay.png"
+                    alt="Crimson Hotel - Boracay"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>Crimson Hotel - Boracay</h3>
+                <p>Project listed in the company’s construction portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/msy-tower-cebu.png"
+                    alt="MSY Tower Cebu"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>MSY Tower Cebu</h3>
+                <p>Project listed in the company’s construction portfolio.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                    src="./images/6-storey-canopy.png"
+                    alt="6th Storey - Canopy"
+                    loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3>6th Storey - Canopy</h3>
+                <p>Project listed in the company’s construction portfolio.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div>
+        <strong>JP Chavez</strong>
+        <p>Electrical Design and Construction · JP Chavez Inc.</p>
+      </div>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+  </body>
+</html>
