@@ -80,7 +80,17 @@ footer a:hover { color: var(--accent-color); }
   .site-header { position: relative; flex-direction: column; text-align: center; gap: 16px; padding: 18px 20px; }
   .brand { flex-direction: column; gap: 7px; }
   .site-header nav { justify-content: center; gap: 15px; }
-  .hero { min-height: 390px; }
+  .hero { min-height: 390px; display: flex;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(19, 22, 54, 0.92) 0%,
+      rgba(30, 34, 65, 0.75) 55%,
+      rgba(30, 34, 65, 0.45) 100%
+    ),
+    url("hero-background.jpg") center / cover no-repeat;}
   .hero-inner > p:not(.eyebrow) { font-size: 15px; }
   .intro { grid-template-columns: 1fr; gap: 20px; padding: 60px 5%; }
   .projects-container { padding: 60px 5%; }
